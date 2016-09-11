@@ -1,13 +1,13 @@
-# koa_middlewares_with_config
+# get_koa_middlewares_with_config
 
-load Koa 2.x middlewares with config
+get Koa 2.x middlewares with config
 
-[![NPM version](https://img.shields.io/npm/v/koa_middlewares_with_config.svg?style=flat-square)](https://www.npmjs.com/package/koa_middlewares_with_config)
+[![NPM version](https://img.shields.io/npm/v/koa_middlewares_with_config.svg?style=flat-square)](https://www.npmjs.com/package/get_koa_middlewares_with_config)
 
 ## Install
 
 ```
-$ npm i -S koa_middlewares_with_config
+$ npm i -S get_koa_middlewares_with_config
 ```
 
 ## Usages
@@ -25,7 +25,7 @@ var conf = {
   }
 }
 
-var middlewares = require('koa_middlewares_with_config')(['koa-favicon', 'koa-etag'], conf)
+var middlewares = require('get_koa_middlewares_with_config')(conf)
 
 app.use(middlewares)
 ```
@@ -53,7 +53,7 @@ var conf = {
   }
 }
 
-module.exports = require('.')(['koa-favicon', 'koa-etag'], conf)
+module.exports = require('.')(conf)
 
 ```
 
@@ -120,7 +120,7 @@ var conf = {
   }
 }
 
-var middlewares = require('.')(['koa-favicon', 'koa-etag'], conf)
+var middlewares = require('.')(conf)
 
 app.use(middlewares)
 
