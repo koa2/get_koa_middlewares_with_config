@@ -2,6 +2,7 @@ const Koa = require('koa');
 const etag = require('koa-etag');
 const favicon = require('koa-favicon');
 const app = new Koa();
+const compose = require('koa-compose')
 
 app.use((ctx, next) => {
   return next().then(() => {
@@ -13,7 +14,8 @@ app.use((ctx, next) => {
   });
 })
 
-app.use(require('./middlewares'))
+// app.use(app.use(compose(middlewares))require('./middlewares'))
+app.use(compose(require('./middlewares')))
 
 app.use((ctx, next)=>{
   console.log('hello etag fresh= ' + ctx.fresh)
