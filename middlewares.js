@@ -12,4 +12,4 @@ var conf = {
   }
 }
 
-module.exports = require('.')(['koa-favicon', 'koa-etag'], conf)
+module.exports = require('.')(conf)

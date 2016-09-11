@@ -26,7 +26,7 @@ var conf = {
   }
 }
 
-var middlewares = require('.')(['koa-favicon', 'koa-etag'], conf)
+var middlewares = require('.')(conf)
 
 app.use(compose(middlewares))
 
